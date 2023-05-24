@@ -22,8 +22,6 @@ public class Main {
             int lengthRead = httpHandler.getRequestBody().read(buffer);
             String body = new String(buffer, 0, lengthRead);
             String ua = httpHandler.getRequestHeaders().get("User-Agent").get(0).toString();
-            System.out.println(body);
-            System.out.println(ua);
             JSONObject jsonObject = null;
             try {
                  jsonObject = JSON.parseObject(body);
